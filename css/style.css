@@ -1,0 +1,232 @@
+/* Importação de fonte */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* Estilização getal da página */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+  background-color: #181F2B;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+
+header {
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+nav {
+  padding: 2vh 7vh;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 100;
+  font-size: 2em;
+}
+#code {
+  color: #4ECDC4;
+  font-weight: 100;
+}
+
+ul li {
+  display: inline-block;
+  margin: 5px;
+}
+
+ul li #btn-contato {
+  background-color: #4ECDC4;
+  border: 1px solid #4ECDC4;
+  padding: 10px 20px;
+  border-radius: .1em;
+}
+
+ul li #btn-contato:hover {
+  text-decoration: underline;
+}
+
+ul li a {
+  font-weight: 100;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px 20px;
+}
+
+ul li a:hover {
+  transition: .3s;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: .1em;
+}
+
+hgroup {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 5em;
+  color: #fff;
+  font-weight: 100;
+}
+span {
+  color: #4ECDC4;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 4em;
+  color: #fff;
+}
+
+/* Mouse ao final do header */
+ #block-arrow {
+  position: absolute;
+  width: 100%;
+  top: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+#block-arrow img {
+  width: 5%;
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-flicker {
+  animation: flickerAnimation 1.5s infinite;
+}
+
+/* Section about */
+section#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+section#about div.textAbout {
+  background-color: rgba(255, 255, 255, .1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+section#about div.textAbout h2 {
+  font-size: 5em;
+}
+
+section#about div.textAbout p {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+section#about div.imgBruno img {
+  position: relative;
+  width: 100%;
+}
+
+/* section projects */
+section#projects {
+  margin-top: 200px;
+  text-align: center;
+}
+
+section#projects h2 {
+  margin-bottom: 50px;
+  font-size: 5em;
+}
+
+section#projects div.projectsImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr;
+}
+
+section#projects img {
+  position: relative;
+  width: 100%;
+  filter: brightness(45%);
+  transition: .3s;
+}
+
+section#projects img:hover {
+  filter: brightness(100%)
+}
+
+
+/* final da página */
+footer {
+  color: #fff;
+  padding: 7%;
+}
+
+footer h2 {
+  font-size: 5em;
+  color: #4ECDC4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer p {
+  width: 70%;
+  font-size: 1.5em;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer p.email {
+  text-align: center;
+  margin-top: 80px;
+}
+
+#social-media {
+  display: flex;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.social img {
+  width: 32px;
+  margin: 10px;
+  transition: .3s;
+}
+
+.social img:hover{
+  transform: scale(1.4);
+}
