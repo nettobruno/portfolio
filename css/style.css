@@ -14,7 +14,6 @@
 body {
   background-color: #181F2B;
   font-family: 'Raleway', sans-serif;
-
 }
 
 
@@ -39,26 +38,12 @@ h1 {
   font-weight: 100;
   font-size: 2em;
 }
-#code {
-  color: #4ECDC4;
-  font-weight: 100;
-}
 
 ul li {
   display: inline-block;
   margin: 5px;
 }
 
-ul li #btn-contato {
-  background-color: #4ECDC4;
-  border: 1px solid #4ECDC4;
-  padding: 10px 20px;
-  border-radius: .1em;
-}
-
-ul li #btn-contato:hover {
-  text-decoration: underline;
-}
 
 ul li a {
   font-weight: 100;
@@ -229,4 +214,183 @@ footer p.email {
 
 .social img:hover{
   transform: scale(1.4);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    border:  1px solid red;
+  }
+  
+  nav {
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  h1 {
+    color: #fff;
+    font-weight: 100;
+    font-size: 2.8em;
+  }
+  
+  ul li {
+    display: none;
+  }
+  
+  
+  hgroup {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 100;
+  }
+  span {
+    color: #4ECDC4;
+    font-weight: bold;
+  }
+  
+  h3 {
+    font-weight: 100;
+    font-size: 4em;
+    color: #fff;
+  }
+  
+  /* Seta ao final do header */
+   #block-arrow {
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #block-arrow img {
+    width: 20%;
+  }
+  
+  @keyframes flickerAnimation {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animate-flicker {
+    animation: flickerAnimation 1.5s infinite;
+  }
+  
+  /* Section about */
+  section#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  section#about div.textAbout {
+    padding: 10px;
+    width: 100vw;
+  }
+  
+  section#about div.textAbout h2 {
+    font-size: 5em;
+  }
+  
+  section#about div.textAbout p {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+
+  section#about div.imgBruno {
+    width: 100vw;
+  }
+  
+  section#about div.imgBruno img {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* section projects */
+  section#projects {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  section#projects h2 {
+    margin-bottom: 50px;
+    font-size: 3em;
+  }
+  
+  section#projects div.projectsImg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8fr;
+  }
+  
+  section#projects img {
+    position: relative;
+    width: 100%;
+    filter: brightness(80%);
+  }
+  
+  
+  /* final da página */
+  footer {
+    color: #fff;
+    padding: 30px 5px;
+  }
+  
+  footer h2 {
+    font-size: 3em;
+    color: #4ECDC4;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  footer p.email {
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  #social-media {
+    display: flex;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  
+  .social img {
+    width: 32px;
+    margin: 10px;
+    transition: .3s;
+  }
+  
+  .social img:hover{
+    transform: scale(1.4);
+  }
 }
