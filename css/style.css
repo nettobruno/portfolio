@@ -363,7 +363,12 @@ footer p.email {
   section#projects img {
     position: relative;
     width: 100%;
-    filter: brightness(80%);
+    filter: brightness(50%);
+  }
+
+  section#projects figcaption {
+    font-size: 2em;
+    font-weight: bold;
   }
   
   
