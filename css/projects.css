@@ -112,8 +112,11 @@ div#projects .project-items:hover {
   z-index: 1;
 }
 
-div#projects .project-items:hover img.project-items-img {
+div#projects .project-items img.project-items-img {
   transition: .5s;
+}
+
+div#projects .project-items:hover img.project-items-img {
   transform: scale(1.1);
   filter: brightness(40%);
 }

@@ -113,12 +113,15 @@ div#projects .project-content .project-items {
   position: relative;
 }
 
+div#projects .project-content .project-items img {
+  transition: .5s;
+}
+
 div#projects .project-content .project-items:hover {
   z-index: 1;
 }
 
 div#projects .project-content .project-items:hover img {
-  transition: .5s;
   transform: scale(1.1);
   filter: brightness(40%);
 }
@@ -230,10 +233,10 @@ div#contact div.social-media {
 
 div#contact div.social-media a {
   margin: 20px;
+  transition: .3s;
 }
 
 div#contact div.social-media a:hover {
-  transition: .3s;
   transform: scale(1.2);
 }
 
