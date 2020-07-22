@@ -1,417 +1,386 @@
-/* Importação de fonte */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-/* Estilização getal da página */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased !important;
-}
-
-body {
-  background-color: #181F2B;
-  font-family: 'Raleway', sans-serif;
-}
-
-
+/* Estilização dos componentes ao topo da tela */
 header {
-  position: relative;
-  max-width: 100vw;
-  height: 100vh;
+  background: url('../img/background.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-
-nav {
-  padding: 2vh 7vh;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+header:after {
+  content: "";
   position: absolute;
-  width: 100%;
-  top: 0;
-}
-
-h1 {
-  color: #fff;
-  font-weight: 100;
-  font-size: 2em;
-}
-
-ul li {
-  display: inline-block;
-  margin: 5px;
-}
-
-
-ul li a {
-  font-weight: 100;
-  text-decoration: none;
-  color: white;
-  font-size: 1.5em;
-  padding: 10px 20px;
-}
-
-ul li a:hover {
-  transition: .3s;
-  background-color: rgba(255, 255, 255, .3);
-  border-radius: .1em;
+  top: 0; bottom: 0; left: 0; right: 0;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  pointer-events: none;
+  z-index: 0;
 }
 
 hgroup {
-  position: absolute;
-  width: 100%;
-  top: 35%;
-  text-align: center;
-}
-
-h2 {
-  font-size: 5em;
-  color: #fff;
-  font-weight: 100;
-}
-span {
-  color: #4ECDC4;
-  font-weight: bold;
-}
-
-h3 {
-  font-weight: 100;
-  font-size: 4em;
-  color: #fff;
-}
-
-/* Mouse ao final do header */
- #block-arrow {
-  position: absolute;
-  width: 100%;
-  top: 85%;
-  display: flex;
-  justify-content: center;
-}
-
-#block-arrow img {
-  width: 5%;
-}
-
-@keyframes flickerAnimation {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-flicker {
-  animation: flickerAnimation 1.5s infinite;
-}
-
-/* Section about */
-section#about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-section#about div.textAbout {
-  background-color: rgba(255, 255, 255, .1);
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  font-size: 3.5em;
+  z-index: 3;
 }
 
-section#about div.textAbout h2 {
-  font-size: 5em;
+h1 {
+  margin-bottom: 30px;
+  line-height: 110px;
 }
 
-section#about div.textAbout p {
-  font-size: 1.6em;
-  margin-bottom: 15px;
+h1, h2 {
+  font-weight: 400;
 }
 
-section#about div.imgBruno img {
-  position: relative;
-  width: 100%;
+h1 > span {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: none;
 }
 
-/* section projects */
-section#projects {
-  margin-top: 200px;
-  text-align: center;
+h2 > span {
+  background-color: #5E00FF;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-section#projects h2 {
-  margin-bottom: 50px;
-  font-size: 5em;
-}
-
-section#projects div.projectsImg {
+/* Estilização do bloco de Sobre */
+div#about {
+  background-color: #EFF1F3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4fr;
+  padding: 150px 100px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
-section#projects a.imgLink {
-  position: relative;
-  display: inline-block;
+div#about div.img-dev div.background-img {
+  width: 450px;
+  height: 650px;
+  background-color: #5E00FF;
 }
 
-section#projects img {
+div#about div.img-dev img {
+  width: 450px;
+  position: absolute;
+  top: 220px;
+  left: 180px;
+}
+
+div#about div.about-text h3 {
+  color: #656274;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+div#about div.about-text p {
+  color: #50514F;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+
+/* Seção com alguns projetos */
+div#projects {
+  padding: 150px 100px;
+}
+
+div#projects h3 {
+  color: white;
+  background-color: #5E00FF;
+  font-size: 2.5em;
+  width: 500px;
+  text-align: center;
+  margin: 0 auto 50px auto;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+div#projects .project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+div#projects .project-content .project-items {
   position: relative;
+}
+
+div#projects .project-content .project-items:hover {
+  z-index: 1;
+}
+
+div#projects .project-content .project-items:hover img {
+  transition: .5s;
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+div#projects .project-content .project-items:hover div.info-image p {
+  display: block;
+}
+
+div#projects .project-content .project-items img {
   width: 100%;
-  filter: brightness(20%);
-  transition: .3s;
 }
 
-section#projects figcaption {
+div#projects .project-content .project-items div.info-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5em;
   color: white;
-  transition: .3s;
+  transition: .5s;
+  text-align: center;
 }
 
-section#projects a:hover img { 
-  filter: brightness(100%);
-}
-section#projects a:hover figcaption {
+div#projects .project-content .project-items div.info-image p {
   display: none;
 }
 
-
-/* final da página */
-footer {
-  color: #fff;
-  padding: 7%;
+div#projects .project-content a#see-more {
+  background-color: #EFF1F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-footer h2 {
-  font-size: 5em;
-  color: #4ECDC4;
+div#projects .project-content a#see-more p {
+  color: #5E00FF;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+div#projects .project-content a#see-more img {
+  width: 15px;
+  margin-left: -5px;
+  margin-top: -20px;
+}
+
+div#projects .project-content a#see-more:hover p {
+  text-decoration: underline;
+}
+
+div#projects .project-content a#see-more:hover {
+  transition: .5s;
+  transform: scale(1.1);
+}
+
+
+/* Informações de Contato */
+div#contact {
+  background-color: #EFF1F3;
+  padding: 150px 100px;
+}
+
+div#contact h3 {
+  color: white;
+  background-color: #5E00FF;
+  font-size: 2.5em;
+  width: 300px;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 auto 50px auto;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+div#contact p {
+  color: #656274;
+  font-size: 1.8em;
+}
+
+div#contact div.dev-contact {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+div#contact div.dev-contact div.contact-email {
+  display: flex;
+  align-items: center;
+}
+
+
+div#contact div.dev-contact div.contact-phone {
+  display: flex;
+  align-items: center;
+}
+
+div#contact div.dev-contact div img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+div#contact div.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+div#contact div.social-media a {
+  margin: 20px;
+}
+
+div#contact div.social-media a:hover {
+  transition: .3s;
+  transform: scale(1.2);
+}
+
+div#contact div.social-media img {
+  width: 50px;
+}
+
+footer {
+  background-color: #5E00FF;
+  padding: 20px 0;
 }
 
 footer p {
-  width: 70%;
-  font-size: 1.5em;
-  text-align: justify;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer p.email {
+  color: white;
+  font-size: 1.4em;
   text-align: center;
-  margin-top: 80px;
 }
 
-#social-media {
-  display: flex;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
+footer a {
+  color: white;
 }
 
-.social img {
-  width: 32px;
-  margin: 10px;
-  transition: .3s;
-}
 
-.social img:hover{
-  transform: scale(1.4);
-}
-
-@media screen and (max-width: 768px) {
+/* Estilização para dispositivos menores */
+@media screen and (max-width: 768px) {  
   header {
-    position: relative;
-    max-width: 100vw;
-    height: 100vh;
-    background-size: cover;
+    padding: 0 10px 0 10px;
   }
-  
-  nav {
-    padding: 2vh;
-    display: flex;
-    justify-content: center;
+
+  hgroup {
+    font-size: 1.2em;
   }
   
   h1 {
-    color: #fff;
-    font-weight: 100;
-    font-size: 2.8em;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 35px;
   }
-  
-  ul li {
-    display: none;
-  }
-  
-  
-  hgroup {
-    position: absolute;
-    width: 100%;
-    top: 25%;
-    text-align: center;
-  }
-  
+
   h2 {
-    font-size: 3em;
-    color: #fff;
-    font-weight: 100;
-  }
-  span {
-    color: #4ECDC4;
-    font-weight: bold;
+    text-align: left;
   }
   
-  h3 {
-    font-weight: 100;
-    font-size: 4em;
-    color: #fff;
+  h2 > span {
+    padding-left: 5px;
+    padding-right: 5px;
   }
   
-  /* Seta ao final do header */
-   #block-arrow {
-    position: absolute;
-    width: 100%;
-    top: 85%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  #block-arrow img {
-    width: 20%;
-  }
-  
-  @keyframes flickerAnimation {
-    0% {
-      opacity: 1;
-    }
-  
-    50% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .animate-flicker {
-    animation: flickerAnimation 1.5s infinite;
-  }
-  
-  /* Section about */
-  section#about {
-    display: grid;
+  /* Estilização do bloco de Sobre */
+  div#about {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 20px 10px;
   }
   
-  section#about div.textAbout {
-    padding: 10px;
-    width: 100vw;
+  div#about div.img-dev div.background-img {
+    margin-top: -100px;
+    width: 300px;
+    height: 400px;
   }
   
-  section#about div.textAbout h2 {
-    font-size: 5em;
-  }
-  
-  section#about div.textAbout p {
-    font-size: 1.6em;
-    margin-bottom: 10px;
+  div#about div.img-dev img {
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
   }
 
-  section#about div.imgBruno {
-    width: 100vw;
-  }
-  
-  section#about div.imgBruno img {
-    position: relative;
-    width: 100%;
-  }
-  
-  /* section projects */
-  section#projects {
-    margin-top: 20px;
+  div#about div.about-text h3 {
     text-align: center;
-  }
-  
-  section#projects h2 {
-    margin-bottom: 50px;
-    font-size: 3em;
-  }
-  
-  section#projects div.projectsImg {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8fr;
-  }
-  
-  section#projects img {
-    position: relative;
-    width: 100%;
-    filter: brightness(50%);
-  }
-
-  section#projects figcaption {
     font-size: 2em;
-    font-weight: bold;
-  }
-  
-  
-  /* final da página */
-  footer {
-    color: #fff;
-    padding: 50px 5px ;
-  }
-  
-  footer h2 {
-    font-size: 3em;
-    color: #4ECDC4;
-    text-align: left;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
   
-  footer p {
+  div#about div.about-text p {
+    font-size: 1.4em;
+    margin: 0 auto 20px auto;
     width: 100%;
-    font-size: 1.5em;
-    text-align: left;
+  }
+  
+  
+  /* Seção com alguns projetos */
+  div#projects {
+    padding: 20px 10px;
+  }
+  
+  div#projects h3 {
+    font-size: 2em;
+    width: auto;
+  }
+  
+  div#projects .project-content {
+    grid-gap: 15;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  
+  div#projects .project-items {
+    box-shadow: 3px 3px 5px #ccc;
+  }
+  
+  div#contact {
+    padding: 20px 10px;
+  }
+  
+  div#contact h3 {
+    font-size: 2em;
+  }
+  
+  div#contact p.text-contact {
+    font-size: 1.4em;
     margin-left: auto;
-    margin-right: auto;
+    margin-bottom: auto;
   }
   
-  footer p.email {
-    text-align: center;
-    margin-top: 80px;
+  div#contact div.dev-contact {
+    flex-direction: column;
+    justify-content: start;
+    font-size: .6em;
   }
   
-  #social-media {
+  div#contact div.dev-contact div.contact-email {
+    align-items: center;
     display: flex;
-    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%
+  }
+  
+  
+  div#contact div.dev-contact div.contact-phone {
+    display: flex;
+    align-items: center;
     width: 100%;
-    margin-top: 10px;
+  }
+
+  div#contact div.dev-contact div img {
+    width: 40px;
   }
   
-  .social img {
-    width: 32px;
+  div#contact div.social-media a {
     margin: 10px;
-    transition: .3s;
   }
-  
-  .social img:hover{
-    transform: scale(1.4);
+
+  footer p {
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
   }
 }

@@ -1,0 +1,180 @@
+.container {
+  padding: 100px 60px;
+}
+
+div.title-arrow {
+  height: 100px;
+  text-align: center;
+  position: relative;
+}
+
+div.title-arrow a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+div.title-arrow a p {
+  color: #656274;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+div.title-arrow a:hover {
+  transition: .3s;
+  transform: scale(1.1);
+}
+
+div.title-arrow h1 {
+  background-color: #5E00FF;
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 500px;
+  margin: 0 auto;
+}
+
+
+/* Seção com todos os projetos */
+div#projects {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+div#projects .project-items {
+  position: relative;
+}
+
+div#projects .project-items img.project-items-img {
+  width: 100%;
+  height: 100%
+}
+
+div#projects .project-items div.info-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  color: white;
+  transition: .5s;
+  text-align: center;
+}
+
+div#projects .project-items div.info-image p,
+div#projects .project-items div.info-image div.project-items-links {
+  visibility: hidden;
+}
+
+div#projects .project-items div.info-image div.project-items-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#projects .project-items div.info-image div.project-items-links a {
+  background-color: #fff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+div#projects .project-items div.info-image div.project-items-links a:hover {
+  transition: .3s;
+  transform: scale(1.1);
+}
+
+div#projects .project-items div.info-image a img {
+  width: 30px;
+  height: 30px;
+}
+
+
+div#projects .project-items:hover div.info-image p,
+div#projects .project-items:hover div.info-image a {
+  visibility: visible;
+}
+
+div#projects .project-items:hover {
+  z-index: 1;
+}
+
+div#projects .project-items:hover img.project-items-img {
+  transition: .5s;
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+
+/* Final da página */
+footer {
+  background-color: #5E00FF;
+  padding: 20px 0;
+}
+
+footer p {
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+
+/* Estilização para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 70px 10px;
+  }
+
+  div.title-arrow a {
+    top: -50px;
+  }
+
+  div.title-arrow a p {
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+
+  div.title-arrow a img {
+    width: 30px;
+  }
+
+  div.title-arrow h1 {
+    font-size: 2em;
+    width: auto;
+  }
+
+
+  /* Seção com todos os projetos */
+  div#projects {
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  div#projects .project-items {
+    box-shadow: 3px 3px 5px #ccc;
+  }
+
+
+  /* Final da página */
+  footer p {
+    font-size: 1.2em;
+  }
+}
