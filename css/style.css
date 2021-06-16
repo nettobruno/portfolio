@@ -1,6 +1,6 @@
 /* Estilização dos componentes ao topo da tela */
 header {
-  background: url('../img/background.jpeg');
+  background: url("../img/background2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,9 +13,13 @@ header {
 header:after {
   content: "";
   position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 100vh;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(100px);
   pointer-events: none;
   z-index: 0;
 }
@@ -31,7 +35,8 @@ h1 {
   line-height: 110px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 400;
 }
 
@@ -42,7 +47,7 @@ h1 > span {
 }
 
 h2 > span {
-  background-color: #5E00FF;
+  background-color: #5e00ff;
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
@@ -50,7 +55,7 @@ h2 > span {
 
 /* Estilização do bloco de Sobre */
 div#about {
-  background-color: #EFF1F3;
+  background-color: #eff1f3;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 150px 100px;
@@ -62,7 +67,7 @@ div#about {
 div#about div.img-dev div.background-img {
   width: 450px;
   height: 650px;
-  background-color: #5E00FF;
+  background-color: #5e00ff;
 }
 
 div#about div.img-dev img {
@@ -79,12 +84,11 @@ div#about div.about-text h3 {
 }
 
 div#about div.about-text p {
-  color: #50514F;
+  color: #50514f;
   font-size: 1.8em;
   margin-bottom: 20px;
   width: 90%;
 }
-
 
 /* Seção com alguns projetos */
 div#projects {
@@ -93,7 +97,7 @@ div#projects {
 
 div#projects h3 {
   color: white;
-  background-color: #5E00FF;
+  background-color: #5e00ff;
   font-size: 2.5em;
   width: 500px;
   text-align: center;
@@ -114,7 +118,7 @@ div#projects .project-content .project-items {
 }
 
 div#projects .project-content .project-items img {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 div#projects .project-content .project-items:hover {
@@ -141,7 +145,7 @@ div#projects .project-content .project-items div.info-image {
   transform: translate(-50%, -50%);
   font-size: 2.5em;
   color: white;
-  transition: .5s;
+  transition: 0.5s;
   text-align: center;
 }
 
@@ -150,7 +154,7 @@ div#projects .project-content .project-items div.info-image p {
 }
 
 div#projects .project-content a#see-more {
-  background-color: #EFF1F3;
+  background-color: #eff1f3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +162,7 @@ div#projects .project-content a#see-more {
 }
 
 div#projects .project-content a#see-more p {
-  color: #5E00FF;
+  color: #5e00ff;
   font-size: 1.8em;
   font-weight: bold;
   text-decoration: none;
@@ -175,20 +179,19 @@ div#projects .project-content a#see-more:hover p {
 }
 
 div#projects .project-content a#see-more:hover {
-  transition: .5s;
+  transition: 0.5s;
   transform: scale(1.1);
 }
 
-
 /* Informações de Contato */
 div#contact {
-  background-color: #EFF1F3;
+  background-color: #eff1f3;
   padding: 150px 100px;
 }
 
 div#contact h3 {
   color: white;
-  background-color: #5E00FF;
+  background-color: #5e00ff;
   font-size: 2.5em;
   width: 300px;
   text-align: center;
@@ -213,7 +216,6 @@ div#contact div.dev-contact div.contact-email {
   align-items: center;
 }
 
-
 div#contact div.dev-contact div.contact-phone {
   display: flex;
   align-items: center;
@@ -233,7 +235,7 @@ div#contact div.social-media {
 
 div#contact div.social-media a {
   margin: 20px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 div#contact div.social-media a:hover {
@@ -245,7 +247,7 @@ div#contact div.social-media img {
 }
 
 footer {
-  background-color: #5E00FF;
+  background-color: #5e00ff;
   padding: 20px 0;
 }
 
@@ -259,9 +261,8 @@ footer a {
   color: white;
 }
 
-
 /* Estilização para dispositivos menores */
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 768px) {
   header {
     padding: 0 10px 0 10px;
   }
@@ -269,7 +270,7 @@ footer a {
   hgroup {
     font-size: 1.2em;
   }
-  
+
   h1 {
     text-align: left;
     margin-bottom: 20px;
@@ -279,25 +280,25 @@ footer a {
   h2 {
     text-align: left;
   }
-  
+
   h2 > span {
     padding-left: 5px;
     padding-right: 5px;
   }
-  
+
   /* Estilização do bloco de Sobre */
   div#about {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 20px 10px;
   }
-  
+
   div#about div.img-dev div.background-img {
     margin-top: -100px;
     width: 300px;
     height: 400px;
   }
-  
+
   div#about div.img-dev img {
     width: 300px;
     position: absolute;
@@ -311,62 +312,60 @@ footer a {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   div#about div.about-text p {
     font-size: 1.4em;
     margin: 0 auto 20px auto;
     width: 100%;
   }
-  
-  
+
   /* Seção com alguns projetos */
   div#projects {
     padding: 20px 10px;
   }
-  
+
   div#projects h3 {
     font-size: 2em;
     width: auto;
   }
-  
+
   div#projects .project-content {
     grid-gap: 15;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
-  
+
   div#projects .project-items {
     box-shadow: 3px 3px 5px #ccc;
   }
-  
+
   div#contact {
     padding: 20px 10px;
   }
-  
+
   div#contact h3 {
     font-size: 2em;
   }
-  
+
   div#contact p.text-contact {
     font-size: 1.4em;
     margin-left: auto;
     margin-bottom: auto;
   }
-  
+
   div#contact div.dev-contact {
     flex-direction: column;
     justify-content: start;
-    font-size: .6em;
+    font-size: 0.6em;
   }
-  
+
   div#contact div.dev-contact div.contact-email {
     align-items: center;
     display: flex;
     margin-bottom: 20px;
-    width: 100%
+    width: 100%;
   }
-  
-  
+
   div#contact div.dev-contact div.contact-phone {
     display: flex;
     align-items: center;
@@ -376,14 +375,14 @@ footer a {
   div#contact div.dev-contact div img {
     width: 40px;
   }
-  
+
   div#contact div.social-media a {
     margin: 10px;
   }
 
   footer p {
-  color: white;
-  font-size: 1.2em;
-  text-align: center;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
   }
 }
