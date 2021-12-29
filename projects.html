@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg" href="img/coding.svg">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/modal.css">
   </head>
   <body>
     <div class="container">
@@ -245,9 +246,40 @@
           </div>
         </div>
       </div>
+
+      <!-- MODAL -->
+      <button id="myBtn">Open Modal</button>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            
+          </div>
+
+          <div class="modal-body">
+            <h2>Como usar?</h2>
+            <p>Passando o mouse por cima de cada imagem, dois ícones irão aparecer:</p>
+
+            <div id="block-items">
+              <div class="item">
+                <img src="img/github.svg" alt="Logo Github">
+                <p>Clicando neste ícone irá abrir a página do github do projeto e você poderá ver o código desenvolvido.</p>
+              </div>
+
+              <div class="item">
+                <img src="img/chain.svg" alt="Logo Link">
+                <p>Este link vai fazer com que a página onde o projeto está rodando seja aberta e você consiga ver o resultado final.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
     </div>
     <footer>
       <p>Feito com ❤️ por <a href="https://github.com/nettobruno" target="_blank">Bruno Netto</a></p>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

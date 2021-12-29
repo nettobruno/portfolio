@@ -1,0 +1,101 @@
+#myBtn {
+  display: none;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.7); 
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  width: 700px; 
+}
+
+.close {
+  color: rgba(0,0,0,.5);
+  float: right;
+  font-size: 50px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 10px;
+}
+
+.modal-body h2 {
+  color: #656274;
+  font-size: 2em;
+  margin: 20px 0 40px;
+  text-align: center;
+}
+
+.modal-body > p {
+  color: #50514F;
+  margin-bottom: 20px;
+  font-size: 1.4em;   
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin-right: 15px;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+  border-radius: 25px;
+}
+
+.item p {
+  color: #50514F;
+  font-size: 1.2em;   
+}
+
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    width: 90%; 
+  }
+
+  .modal-body h2 { 
+    font-size: 1.8em;
+    margin: 20px 0;
+  }
+  
+  .modal-body > p {
+    font-size: 1.2em;   
+  }
+
+  .item p {
+    font-size: 1em;   
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .modal-content {
+    padding: 10px;
+  }
+}
