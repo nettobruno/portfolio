@@ -45,8 +45,8 @@ div.title-arrow h1 {
 div#projects {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   justify-content: center;
 }
 
@@ -139,14 +139,27 @@ footer a {
 }
 
 
+
+
 /* Estilização para dispositivos menores */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 70px 10px;
+@media screen and (max-width: 1300px) {
+  div#projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
   }
 
   div.title-arrow a {
     top: -50px;
+  }
+
+  div.title-arrow h1 {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 70px 10px;
   }
 
   div.title-arrow a p {
@@ -163,8 +176,6 @@ footer a {
     width: auto;
   }
 
-
-  /* Seção com todos os projetos */
   div#projects {
     grid-gap: 15px;
     grid-template-columns: 1fr;
@@ -174,7 +185,6 @@ footer a {
   div#projects .project-items {
     box-shadow: 3px 3px 5px #ccc;
   }
-
 
   /* Final da página */
   footer p {

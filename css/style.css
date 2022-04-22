@@ -57,11 +57,15 @@ h2 > span {
 div#about {
   background-color: #eff1f3;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   padding: 150px 100px;
   position: relative;
   align-items: center;
   justify-content: center;
+}
+
+div#about div {
+  /* border: 1px solid red; */
 }
 
 div#about div.img-dev div.background-img {
@@ -262,6 +266,48 @@ footer a {
 }
 
 /* Estilização para dispositivos menores */
+@media screen and (max-width: 1440px) {
+  div#about div.img-dev div.background-img {
+    width: 400px;
+    height: 600px;
+  }
+
+  div#about div.img-dev img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  div#about div.img-dev div.background-img {
+    width: 300px;
+    height: 500px;
+  }
+
+  div#about div.img-dev img {
+    top: 280px;
+    left: 160px;
+    width: 300px;
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  div#projects,
+  div#contact {
+    padding: 150px 50px;
+  }
+
+  div#projects h3,
+  div#contact h3 {
+    width: auto;
+  }
+
+  div#projects .project-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 768px) {
   header {
     padding: 0 10px 0 10px;
@@ -321,12 +367,11 @@ footer a {
 
   /* Seção com alguns projetos */
   div#projects {
-    padding: 20px 10px;
+    padding: 80px 10px;
   }
 
   div#projects h3 {
     font-size: 2em;
-    width: auto;
   }
 
   div#projects .project-content {
@@ -340,7 +385,7 @@ footer a {
   }
 
   div#contact {
-    padding: 20px 10px;
+    padding: 80px 10px;
   }
 
   div#contact h3 {
