@@ -3,7 +3,7 @@
 </p>
 
 
-<h1 align="center">Portfólio Bruno Netto</h1>
+<h1 align="center">Portfólio Bruno Netto(DEPRECATED)</h1>
 <p align="left">Página para mostrar os principais projetos desenvolvidos por mim, e todas as formas para entrar em contato comigo. Fique à vontade para ver tudo o que tenho para mostrar😁</p>
 
 
